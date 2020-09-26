@@ -1,0 +1,82 @@
+{
+  "id": 1,
+  "name": "test 1",
+  "browser": "Chrome",
+  "preprocess": {
+    "process": "login",
+    "params": {
+      "key1": "value1",
+      "key2": "value2"
+    }
+  },
+  "steps": [
+    {
+      "id": 1,
+      "name": "点击菜单",
+      "operator": {
+        "category": "click",
+        "operatorInstance": {
+          "selectorCategory": "xpath",
+          "selector": "/sds/ds/fdsd/fs/sfd/f/span"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "输入值",
+      "operator": {
+        "category": "input",
+        "operatorInstance": {
+          "selectorCategory": "xpath",
+          "selector": "/sds/ds/fdsd/fs/sfd/f/span",
+          "value": "傻了个二比的测试"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "查询值写到输入框",
+      "operator": {
+        "category": "input",
+        "operatorInstance": {
+          "selectorCategory": "xpath",
+          "selector": "/sds/ds/fdsd/fs/sfd/f/span",
+          "value": "傻了个二比的测试"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "点击查询按钮",
+      "operator": {
+        "category": "click",
+        "operatorInstance": {
+          "selectorCategory": "xpath",
+          "selector": "/sds/ds/fdsd/fs/sfd/f/button[0]"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "检查界面url是否跳转了",
+      "operator": {
+        "category": "assert_url",
+        "operatorInstance": {
+          "value": "http://xxxxc.ccdsd.dsdfs/ga/gsa/wf/eef/ds"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "检查label的文本",
+      "operator": {
+        "category": "assert_text",
+        "operatorInstance": {
+          "selectorCategory": "xpath",
+          "selector": "/sds/ds/fdsd/fs/sfd/f/button[0]",
+          "value": "ds"
+        }
+      }
+    }
+  ]
+}
