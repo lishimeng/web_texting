@@ -2,6 +2,7 @@ import logging
 from time import sleep
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
 
 logger = logging.getLogger(__name__)
 
@@ -41,7 +42,10 @@ class Operation:
 
     # 元素的点击
     def click(self, loc):
-        self.locator(loc).click()
+        ActionChains(self.browser).double_click(self.locator(loc)).perform()
+
+    def double_click(self, loc):
+        self.locator(loc)
 
     def text(self, loc):
         return self.locator(loc).text

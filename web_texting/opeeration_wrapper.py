@@ -38,6 +38,12 @@ class OperationWrapper(Operation):
         elem = element(category, selector)
         super().click(elem)
 
+    # 双击
+    def double_clc(self, category, selector):
+        logger.debug('double click:[{}]{}'.format(category, selector))
+        elem = element(category, selector)
+        super().double_click(elem)
+
     def get_text(self, category, selector):
         logger.debug('get text:[{}]{}'.format(category, selector))
         elem = element(category, selector)

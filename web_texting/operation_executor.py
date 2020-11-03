@@ -29,6 +29,11 @@ class OperationExecutor:
         selector = operation_config['selector']
         self.ow.clc_btn(selector_category, selector)
 
+    def double_click(self, operation_config):
+        selector_category = operation_config['selectorCategory']
+        selector = operation_config['selector']
+        self.ow.double_clc(selector_category, selector)
+
     def select(self, operation_config):
         selector_category = operation_config['selectorCategory']
         selector = operation_config['selector']
