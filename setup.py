@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     # 以下为必需参数
     name='web_texting',  # 模块名
-    version='1.1.0',  # 当前版本
+    version='1.2.0',  # 当前版本
     description='A Web test module',  # 简短描述
     packages=['web_texting'],
     py_modules=[],  # 单文件模块写法
