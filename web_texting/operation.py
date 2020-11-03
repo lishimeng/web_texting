@@ -42,10 +42,10 @@ class Operation:
 
     # 元素的点击
     def click(self, loc):
-        ActionChains(self.browser).double_click(self.locator(loc)).perform()
+        self.locator(loc).click()
 
     def double_click(self, loc):
-        self.locator(loc)
+        ActionChains(self.browser).double_click(self.locator(loc)).perform()
 
     def text(self, loc):
         return self.locator(loc).text
